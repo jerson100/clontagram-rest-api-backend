@@ -30,11 +30,7 @@ mongoose.connection.on("error", () => {
 });
 
 const app = express();
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.raw({ type: "image/*", limit: "8mb" }));
 app.use(
